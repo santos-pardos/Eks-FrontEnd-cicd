@@ -1,7 +1,7 @@
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
-  name: kubernetes-demo-frontend-car
+  name: frontend-car-deployment
   labels: 
      app: car
 
