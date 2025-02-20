@@ -59,6 +59,5 @@ jobs:
 
      - name: Deploy EKS
        run: |
-        cd manifests
         kubectl apply -f frontend-car-deployment.yaml
         kubectl apply -f frontend-car-service.yaml
