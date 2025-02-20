@@ -1,23 +1,23 @@
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
-  name: kubernetes-demo-netflix
+  name: kubernetes-demo-frontend-car
   labels: 
-     app: netflix
+     app: car
 
 spec:
   replicas: 1 
   selector:
     matchLabels:
-      app: netflix
+      app: car
 
   template:
     metadata:
       labels:
-        app: netflix
+        app: car
     spec:
       containers:
-      - name: netflix
+      - name: car
         image: DOCKER_IMAGE
         imagePullPolicy: Always
         ports:
