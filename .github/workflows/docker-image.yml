@@ -58,8 +58,6 @@ jobs:
        run: aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --region $AWS_REGION
 
      - name: Deploy EKS
-       env:     
-         IMAGE_TAG: ${{ steps.commit.outputs.short }}
        run: |
         sed -i.bak "s|DOCKER_IMAGE|docker-frontend-car:00|g" manifests/frontend-car-deployment.yaml && \
         kubectl apply -f manifests/frontend-car-deployment.yaml
