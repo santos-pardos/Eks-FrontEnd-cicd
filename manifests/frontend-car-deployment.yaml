@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: car
-        image: DOCKER_IMAGE
+        image: santospardos/docker-frontend-car:00
         imagePullPolicy: Always
         ports:
         - containerPort: 80
