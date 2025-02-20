@@ -59,6 +59,5 @@ jobs:
 
      - name: Deploy EKS
        run: |
-        sed -i.bak "s|DOCKER_IMAGE|santospardos/docker-frontend-car:00|g" manifests/frontend-car-deployment.yaml && \
         kubectl apply -f manifests/frontend-car-deployment.yaml
         kubectl apply -f manifests/frontend-car-service.yaml
